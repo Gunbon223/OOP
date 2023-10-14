@@ -1,17 +1,34 @@
 package bvn6;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        StudentTechMaster[] studentList = new StudentTechMaster[4];
-        studentList[0]  = new IT_Student("Court",4,5,10);
-        studentList[1] = new Biz_Student("Jordan",10,9);
-        studentList[3] = new Biz_Student("Air Force",7.5,6);
-        studentList[2]  = new IT_Student("Legacy",1,1,2);
-        for(StudentTechMaster i : studentList) {
+        Scanner scan = new Scanner(System.in);
+        ArrayList<StudentTechMaster> stundents = new ArrayList<>();
+
+        System.out.println("Nhap so hoc sinh: ");
+        int n = Integer.parseInt(scan.nextLine());
+        for(int i=0;i<n;i++) {
+            System.out.print("Nhap ten: ");
+            String name = scan.nextLine();
+            System.out.print("Nhap diem Java: ");
+            double javaScore = Double.parseDouble(scan.nextLine());
+            System.out.print("Nhap diem Html: ");
+            double htmlScore = Double.parseDouble(scan.nextLine());
+            System.out.print("Nhap diem CSS: ");
+            double cssScore = Double.parseDouble(scan.nextLine());
+            StudentTechMaster newStudent = new IT_Student(name, javaScore, htmlScore, cssScore);
+            stundents.add(newStudent);
+        }
+
+        for (StudentTechMaster i:
+             stundents) {
             i.display();
         }
 
-
+        }
 
     }
-}
+

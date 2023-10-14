@@ -36,6 +36,34 @@ public class IT_Student extends StudentTechMaster{
         return "Error ";
     }
 
+    public double getJavaScore() {
+        return javaScore;
+    }
+
+    public void setJavaScore(double javaScore) {
+        this.javaScore = javaScore;
+    }
+
+    public double getHtmlScore() {
+        return htmlScore;
+    }
+
+    public void setHtmlScore(double htmlScore) {
+        this.htmlScore = htmlScore;
+    }
+
+    public double getCssScore() {
+        return cssScore;
+    }
+
+    public void setCssScore(double cssScore) {
+        this.cssScore = cssScore;
+    }
+
+    public void display() {
+        System.out.println("Sinh vien "+getName()+" hoc "+getMajor()+ " co diem: "+getScore()+ "diem java:"+getJavaScore()+ getHtmlScore()+ getCssScore()+" GPA: "+getGpa());
+    }
+
 
 
 }
