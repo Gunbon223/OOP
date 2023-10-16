@@ -1,6 +1,7 @@
 package b8_lab1;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 import static b8_lab1.Main.scan;
@@ -19,12 +20,12 @@ public class Households {
             String name = scan.nextLine();
             System.out.printf("Nhap id: ");
             int id = Integer.parseInt(scan.nextLine());
-            System.out.printf("Nhap dob:(dd-MM-YY) ");
-            String dob = scan.nextLine();
-
+            System.out.printf("Nhap dob:(dd/MM/yy) ");
+            String dobString = scan.nextLine();
+            LocalDate dateOfBirth = LocalDate.parse(dobString, DateTimeFormatter.ofPattern("dd/MM/yy"));
             System.out.print("Nhap cong viec: ");
             String job = scan.nextLine();
-            FamilyMember familyMember = new FamilyMember(id,name,dob,job);
+            FamilyMember familyMember = new FamilyMember(id,name,dateOfBirth,job);
             familyMembers.add(familyMember);
         }
         return familyMembers;

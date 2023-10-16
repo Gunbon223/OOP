@@ -1,5 +1,6 @@
 package b8_lab1;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 import static b8_lab1.Main.scan;
@@ -7,7 +8,7 @@ import static b8_lab1.Main.scan;
 public class FamilyMember {
     private int id;
     private String name;
-    private String dob;
+    private LocalDate dob;
     private String job;
 
     @Override
@@ -20,7 +21,7 @@ public class FamilyMember {
                 '}';
     }
 
-    public FamilyMember(int id, String name, String dob, String job) {
+    public FamilyMember(int id, String name, LocalDate dob, String job) {
         this.id = id;
         this.name = name;
         this.dob = dob;
@@ -53,11 +54,11 @@ public class FamilyMember {
         this.name = name;
     }
 
-    public String getDob() {
+    public LocalDate getDob() {
         return dob;
     }
 
-    public void setDob(String dob) {
+    public void setDob(LocalDate dob) {
         this.dob = dob;
     }
 
