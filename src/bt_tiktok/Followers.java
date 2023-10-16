@@ -13,6 +13,9 @@ public class Followers {
         this.numberOfLike = numberOfLike;
     }
 
+    public Followers() {
+    }
+
     @Override
     public String toString() {
         return "Followers {" +

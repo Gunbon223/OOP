@@ -11,6 +11,19 @@ private String singer;
         this.singer = singer;
     }
 
+    public Songs() {
+    }
+
+    @Override
+    public String toString() {
+        return "Songs{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", singer='" + singer + '\'' +
+                '}';
+    }
+
+
     public int getId() {
         return id;
     }
