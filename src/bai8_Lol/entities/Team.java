@@ -1,7 +1,4 @@
-package bai8_Lol;
-
-import bt_tiktok.Main;
-import bt_tiktok.Songs;
+package bai8_Lol.entities;
 
 import java.util.ArrayList;
 
@@ -19,16 +16,6 @@ public class Team {
     public Team() {
     }
 
-    public ArrayList<Champion> addChampion() {
-        ArrayList<Champion> champions = new ArrayList<>();
-            Champion champion = new Champion();
-            System.out.print("Nhap ten tuong cua player"  +": ");
-            champion.setName(Main.scan.nextLine());
-            System.out.print("Nhap vi tri cua player"  +": ");
-            champion.setPosition(Main.scan.nextLine());
-            champions.add(champion);
-        return champions;
-    }
 
     @Override
     public String toString() {

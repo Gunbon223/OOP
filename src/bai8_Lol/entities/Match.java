@@ -1,4 +1,4 @@
-package bai8_Lol;
+package bai8_Lol.entities;
 
 import bt_tiktok.Main;
 
@@ -10,17 +10,7 @@ public class Match {
     ArrayList<Team> team2 = new ArrayList<>();
     LocalDate matchStartTime;
 
-    public ArrayList<Team> addTeamToMatch() {
-        ArrayList<Team> teams = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
-            Team team = new Team();
-            System.out.print("Nhap ten player thu " +(i+1) +": ");
-            team.setPlayer(Main.scan.nextLine());
-            team.setChampionList(team.addChampion());
-            teams.add(team);
-        }
-        return teams;
-    }
+
 
     @Override
     public String toString() {

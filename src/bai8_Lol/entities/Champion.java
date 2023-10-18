@@ -1,4 +1,4 @@
-package bai8_Lol;
+package bai8_Lol.entities;
 
 public class Champion {
     private String championName;
