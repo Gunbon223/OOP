@@ -65,4 +65,6 @@ public class StundentService_b2 {
                     "So % hs C: "+ countC/studentSum*100+"\n");
 
     }
+
+
 }
