@@ -54,7 +54,7 @@ public class WorkerService {
      public void menu(ArrayList<Worker> workers ) {
            String choice = "";
          do {
-             System.out.println("=======Menu: ========");
+             System.out.println("========  Menu: ========");
              System.out.println("1.AddWorker"+
                      "\n2.UpSalary"+"\n3.DownSalary"+
                      "\n4.Display information salary"+"\n4.Exit");
@@ -70,11 +70,12 @@ public class WorkerService {
                  case "3":
                      upSalary(workers,"-");
                      break;
+
              }
              if (choice.equalsIgnoreCase("4")) {
                  System.out.println(workers);
              }
-             else System.out.println("Sai lua chon :0");
+             else System.out.println("Sai lua chon :0 chon lai");
          }
          while (choice.equalsIgnoreCase("4")==false);
         }
