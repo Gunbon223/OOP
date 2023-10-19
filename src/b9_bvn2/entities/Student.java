@@ -1,23 +1,16 @@
-package b9_b1.entities;
+package b9_bvn2.entities;
 
 public class Student {
     private static int autoId;
     private int id;
     private String name;
-    private String address;
     private String rank;
 
     public Student() {
         this.id = ++autoId;
+
     }
 
-    public String toString1() {
-        return "Student " +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", address='" + address + '\'' +"\n"
-                ;
-    }
 
     public void setRank(String rank) {
         this.rank = rank;
@@ -35,15 +28,6 @@ public class Student {
     public void setName(String name) {
         this.name = name;
     }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
 
 
     //b2
@@ -86,5 +70,19 @@ public class Student {
                 ", scorePhysic=" + scorePhysic +
                 ", scoreChemistry=" + scoreChemistry +
                 '\n'+"AVG Score: "+ getRank();
+    }
+
+    public String getAvgScore() {
+        double avgScore = (scoreMath+scorePhysic+scoreChemistry)/3;
+        if (avgScore >=8 &&avgScore<10) {
+            return "Xep loai A";
+        }
+        if (avgScore <8 &&avgScore>=6.5) {
+            return "Xep loai B";
+        }
+        if (avgScore >0 &&avgScore<6.5) {
+            return "Xep loai C";
+        }
+        return "Nhap sai diem, nhap lai";
     }
 }
